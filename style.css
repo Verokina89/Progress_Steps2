@@ -64,7 +64,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-	gap: 40px;
+	gap: 38px;
 }
 
 .number {
@@ -84,11 +84,11 @@ body {
 	background-color: #38383885;
 	position: absolute;
 	top: 50%;
-	left: 100%;
-	width: 100%; /* distancia entre los círculos*/
+	left: 50px;
+	width: 82%; /* distancia entre los círculos*/
 	height: 5px;
 	transform: translateY(-50%);
-	/* transition: box-shadow 0.3s ease, transform 0.3s ease; */
+	transition: box-shadow 0.3s ease, transform 0.3s ease; 
 }
 
 .number:last-child::after {
@@ -100,14 +100,20 @@ body {
 	border-color: #3498db;
 	transition: box-shadow 0.3s ease, transform 0.3s ease;
 	transform: scale(1.1);
-	right: 15px;
 } 
 
 .number.active::after{
 	box-shadow: 0 0 10px 3px #3498db;
 	border-color: #3498db;
 	background-color: #3498db;
+}
 
+.movingLine {
+	background-color: #3498db;
+}
+
+.movingLine.active {
+	
 }
 
 .buttons {
@@ -128,6 +134,10 @@ body {
 	
 }
 
+.button:disabled {
+	cursor: not-allowed; /*indica que se anula el btn*/
+}
+
 
 footer {
 	color: rgba(245, 245, 220, 0.119);
@@ -141,12 +151,17 @@ footer {
 	font-size: 12px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 140px) {
     footer {
         position: relative;
         margin: 20px auto;
         text-align: center;
     }
 
+	.content {
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
 	
 }
