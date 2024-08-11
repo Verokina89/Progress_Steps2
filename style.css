@@ -71,22 +71,24 @@ body {
     display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 5px solid #383838;
+	border: 5px solid #38383885;
 	border-radius: 50%;
 	width: 50px;
 	height: 50px;
 	position: relative;
+	
 }
 
 .number::after {
 	content: '';
-	background-color: #383838;
+	background-color: #38383885;
 	position: absolute;
 	top: 50%;
 	left: 100%;
 	width: 100%; /* distancia entre los círculos*/
 	height: 5px;
 	transform: translateY(-50%);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .number:last-child::after {
@@ -98,8 +100,8 @@ body {
 	box-shadow: 0 0 15px 3px #3498db;
 	transition: box-shadow 0.3s ease, transform 0.3s ease;
 	transform: scale(1.1);
-    right: 13px;
 } 
+
 
 .buttons {
     align-items: center;
@@ -118,7 +120,6 @@ body {
     font-size: 16px;
 	
 }
-
 
 
 footer {
