@@ -89,19 +89,22 @@ body {
 	transform: translateY(-50%);
 }
 
-.number:last-child::after{
+.number:last-child::after {
 	content: none;
 }
 
 .number.active {
-	box-shadow: 0 0 10px 5px #3498db;
     border: none;
-    right: 5px;
+	box-shadow: 0 0 15px 3px #3498db;
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+	transform: scale(1.1);
+    right: 13px;
 } 
 
 .buttons {
     align-items: center;
     margin: 50px;
+
 }
 
 .button {
@@ -113,7 +116,10 @@ body {
     padding: 8px 40px;
     margin: 10px;
     font-size: 16px;
+	
 }
+
+
 
 footer {
 	color: rgba(245, 245, 220, 0.119);
@@ -124,4 +130,15 @@ footer {
     background-color: #f8f8f810;
 	border-radius: 10px;
 	margin: 10px;
+	font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    footer {
+        position: relative;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+	
 }
